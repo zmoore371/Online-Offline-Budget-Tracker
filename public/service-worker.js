@@ -14,8 +14,9 @@ const FILES_TO_CACHE = [
     "/styles.css"
 ]
 
-// self.addEventListener("install", function (e) {
-//     e.waitUntil(
-//         caches.open(DATA_CACHE_NAME).then((cache) => cache.add())
-//     )
-// })
+// Add all files to cache
+self.addEventListener("install", function (e) {
+    e.waitUntil(
+        caches.open(DATA_CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
+    )
+})
