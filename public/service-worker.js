@@ -11,7 +11,8 @@ const FILES_TO_CACHE = [
     "/index.html",
     "/index.js",
     "/manifest.webmanifest",
-    "/styles.css"
+    "/styles.css",
+    "db.js"
 ]
 
 // Add all files to cache
@@ -20,3 +21,4 @@ self.addEventListener("install", function (e) {
         caches.open(DATA_CACHE_NAME).then((cache) => cache.addAll(FILES_TO_CACHE))
     )
 })
+
