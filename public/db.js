@@ -2,7 +2,7 @@ console.log("Hola from db.js")
 
 let db;
 
-const request = indexedDB.open("BudgetDB", 2)
+const request = indexedDB.open("budget", 1)
 
 request.onupgradeneeded = function (e) {
     const db = e.target.result;
